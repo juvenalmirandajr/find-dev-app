@@ -1,11 +1,11 @@
 const axios = require("axios")
 const Dev = require("../models/Dev")
-const parseStringAsArray = require('../utils/parseStringAsArray')
+const parseStringAsArray = require("../utils/parseStringAsArray")
 
 module.exports = {
   async index(req, res) {
-      const devs = await Dev.find();
-      return res.json(devs);
+    const devs = await Dev.find()
+    return res.json(devs)
   },
 
   async store(req, res) {
@@ -19,7 +19,7 @@ module.exports = {
       const arrayTechs = parseStringAsArray(techs)
       const location = {
         type: "Point",
-        coordinates: [longitude, latitude]
+        coordinates: [longitude, latitude],
       }
       dev = await Dev.create({
         github_username,
@@ -27,9 +27,32 @@ module.exports = {
         avatar_url,
         bio,
         techs: arrayTechs,
-        location
+        location,
       })
     }
     return res.json(dev)
-  }
+  },
+
+  async update(req, res) {
+    const { github_username, techs, latitude, longitude } = req.body
+    const arrayTechs = parseStringAsArray(techs)
+
+    let dev = await Dev.update(
+      { github_username: github_username },
+      {
+        $set: {
+          techs: arrayTechs,
+          latitude: latitude,
+          longitude: longitude,
+        },
+      }
+    )
+    return res.json(dev)
+  },
+
+  async destroy(req, res) {
+    const user = req.params.github_username
+    let dev = await Dev.deleteOne({ github_username: user })
+    return res.json(dev)
+  },
 }
