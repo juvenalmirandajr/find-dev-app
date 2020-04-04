@@ -2,8 +2,8 @@ const mongoose = require("mongoose")
 const express = require("express")
 const routes = require("./routes")
 
-const USER_DATABASE = "someone"
-const PASSWORD_DATABASE = "somepassword"
+const USER_DATABASE = "password"
+const PASSWORD_DATABASE = "password"
 const DATA_BASE = "find_dev_app"
 mongoose.connect(
   `mongodb+srv://${USER_DATABASE}:${PASSWORD_DATABASE}@cluster0-yhvgd.mongodb.net/${DATA_BASE}?retryWrites=true&w=majority`,
