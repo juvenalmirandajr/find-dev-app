@@ -2,12 +2,13 @@ import React from "react"
 import "./styles.css"
 
 function DevItem({ dev }) {
+  const name = dev.name ? dev.name : dev.github_username
   return (
     <li className="dev-item">
       <header>
-        <img src={dev.avatar_url} alt={dev.name} />
+        <img src={dev.avatar_url} alt={name} />
         <div className="user-info">
-          <strong>{dev.name}</strong>
+          <strong>{name}</strong>
           <span>{dev.techs.join(", ")}</span>
         </div>
       </header>
