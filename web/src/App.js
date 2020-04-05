@@ -1,7 +1,8 @@
-import React, { useState } from "react"
+import React from "react"
 import "./global.css"
 import "./App.css"
 import "./Sidebar.css"
+import "./Main.css"
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
             <input name="techs" id="techs" required />
           </div>
           <div className="input-group">
-          <div className="input-block">
+            <div className="input-block">
               <label htmlFor="latitude">Latitude</label>
               <input name="latitude" id="latitude" required />
             </div>
@@ -30,7 +31,54 @@ function App() {
           <button type="submit">Submit</button>
         </form>
       </aside>
-      <main></main>
+      <main>
+        <ul>
+          <li className="dev-item">
+            <header>
+              <img src="https://avatars2.githubusercontent.com/u/12603203?s=460&u=12b35b546b4dac6f986a0484ae43da70ae1ecc77&v=4" alt="Juvenal Miranda Jr."/>
+              <div className="user-info">
+                <strong>Juvenal Miranda Jr.</strong>
+                <span>JavaScript, React.JS, Java</span>
+              </div>
+            </header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia a odio at blandit. Sed mi enim, tristique quis massa eu, aliquet laoreet nisl.</p>
+            <a href="https://github.com/juvenalmirandajr" target="_blank">Link to my profile on Github</a>
+          </li>
+          <li className="dev-item">
+            <header>
+              <img src="https://avatars2.githubusercontent.com/u/12603203?s=460&u=12b35b546b4dac6f986a0484ae43da70ae1ecc77&v=4" alt="Juvenal Miranda Jr."/>
+              <div className="user-info">
+                <strong>Juvenal Miranda Jr.</strong>
+                <span>JavaScript, React.JS, Java</span>
+              </div>
+            </header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia a odio at blandit. Sed mi enim, tristique quis massa eu, aliquet laoreet nisl.</p>
+            <a href="https://github.com/juvenalmirandajr" target="_blank">Link to my profile on Github</a>
+          </li>
+          <li className="dev-item">
+            <header>
+              <img src="https://avatars2.githubusercontent.com/u/12603203?s=460&u=12b35b546b4dac6f986a0484ae43da70ae1ecc77&v=4" alt="Juvenal Miranda Jr."/>
+              <div className="user-info">
+                <strong>Juvenal Miranda Jr.</strong>
+                <span>JavaScript, React.JS, Java</span>
+              </div>
+            </header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia a odio at blandit. Sed mi enim, tristique quis massa eu, aliquet laoreet nisl.</p>
+            <a href="https://github.com/juvenalmirandajr" target="_blank">Link to my profile on Github</a>
+          </li>
+          <li className="dev-item">
+            <header>
+              <img src="https://avatars2.githubusercontent.com/u/12603203?s=460&u=12b35b546b4dac6f986a0484ae43da70ae1ecc77&v=4" alt="Juvenal Miranda Jr."/>
+              <div className="user-info">
+                <strong>Juvenal Miranda Jr.</strong>
+                <span>JavaScript, React.JS, Java</span>
+              </div>
+            </header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia a odio at blandit. Sed mi enim, tristique quis massa eu, aliquet laoreet nisl.</p>
+            <a href="https://github.com/juvenalmirandajr" target="_blank">Link to my profile on Github</a>
+          </li>
+        </ul>
+      </main>
     </div>
   )
 }
